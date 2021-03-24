@@ -122,4 +122,13 @@ public class DominoPlayer
 		}
 		*/
 	}
+	public void print() 
+	{
+		Iterator<DominoTile> it = playerTiles.getIterator();
+		while(it.hasNext())
+		{
+			DominoTile t = it.next();
+			System.out.print(t.toString());
+		}
+	}
 }

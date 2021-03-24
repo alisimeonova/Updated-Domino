@@ -1,6 +1,7 @@
 package edu;
 
 import edu.Node;
+import edu.Deck.DeckIterator;
 
 public class LinkedList<T> implements List<T> 
 {
@@ -152,6 +153,35 @@ public class LinkedList<T> implements List<T>
 			temp = temp.next;
 		}
 		return -1;
+		
+	}
+	
+	public Iterator<T> getIterator()
+	{
+		return new LinkedListIterator();
+	}
+	
+	private class LinkedListIterator implements Iterator<T>
+	{
+		Node<T> current;
+		LinkedListIterator()
+		{
+			current = get(0);
+		}
+		
+		@Override
+		public T next() {
+			T toReturn = current.data;
+			current = current.next;
+			return toReturn;
+		}
+
+		@Override
+		public boolean hasNext() {
+			if(current == null)
+				return false;
+			return current.next != null;
+		}
 		
 	}
 
