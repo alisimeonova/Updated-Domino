@@ -19,6 +19,7 @@ public class GameTest {
 		tile.add(new DominoTile(1, 6));
 		tile.add(new DominoTile(5, 4));
 		tile.add(new DominoTile(0, 6));
+		
 	}
 
 }

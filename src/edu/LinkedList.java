@@ -1,7 +1,7 @@
 package edu;
 
 import edu.Node;
-import edu.Deck.DeckIterator;
+
 
 public class LinkedList<T> implements List<T> 
 {
@@ -166,7 +166,7 @@ public class LinkedList<T> implements List<T>
 		Node<T> current;
 		LinkedListIterator()
 		{
-			current = get(0);
+			current = linkedList;
 		}
 		
 		@Override
